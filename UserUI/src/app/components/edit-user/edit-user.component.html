@@ -1,0 +1,21 @@
+<div *ngIf="user">
+    <h2>{{ user.firstName }}</h2>
+    <div>
+      First Name:
+      <input [(ngModel)]="user.firstName" placeholder="First Name" />
+    </div>
+    <div>
+      Last Name:
+      <input [(ngModel)]="user.lastName" placeholder="Last Name" />
+    </div>
+    <div>
+      Birthdate:
+      <input [(ngModel)]="user.birthDate" placeholder="Birth Date" />
+    </div>
+    <div>
+      Job:
+      <input [(ngModel)]="user.job" placeholder="Job" />
+    </div>
+    <button (click)="saveUser(user)" *ngIf="!user.id">Save</button>
+  </div>
+
